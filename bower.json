@@ -1,0 +1,29 @@
+{
+  "name": "kohot-client",
+  "version": "0.0.1",
+  "homepage": "http://kohot.com",
+  "authors": [
+    "Yuval Zalka <yuvalzalka@gmail.com>"
+  ],
+  "description": "kohot managment system",
+  "main": "app/app.js",
+  "keywords": [
+    "soccer",
+    "football",
+    "hood"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css-only": "~3.3.4",
+    "angular-ui-bootstrap-bower": "~0.12.1",
+    "angularAMD": "~0.2.1"
+  }
+}
