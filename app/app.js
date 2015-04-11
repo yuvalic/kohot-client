@@ -1,1 +1,1 @@
-var app = angular.module("kohotApp",["kohotApp.controllers", "kohotApp.directives"]);
+var app = angular.module("kohotApp",['ngRoute', 'kohotApp.controllers', 'kohotApp.directives', 'ui.bootstrap']);

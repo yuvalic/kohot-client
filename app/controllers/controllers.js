@@ -1,10 +1,14 @@
-var appProgressCtrl = angular.module("progress.controllers",["kohotApp.controllers"]);
+var app = angular.module('kohotApp.controllers',[]);
 
+app.controller('PlayerController', function ($scope,Players){
 
-appProgressCtrl.controller('ProgressCtrl', function ($scope) {
+	$scope.players = Players;
+
+})
+.controller('ProgressCtrl', function ($scope) {
   $scope.max = 100;
 
- /* $scope.random = function() {
+  $scope.random = function() {
     var value = Math.floor((Math.random() * 100) + 1);
     var type;
 
@@ -37,5 +41,5 @@ appProgressCtrl.controller('ProgressCtrl', function ($scope) {
         });
     }
   };
-  $scope.randomStacked();*/
+  $scope.randomStacked();
 });
