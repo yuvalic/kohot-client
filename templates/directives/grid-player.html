@@ -1,0 +1,31 @@
+<div  class="player panel panel-primary">           
+    <div class='panel-heading clearfix'>
+        <h3 class="panel-title pull-left">{{ player.fullName }} </h3>
+        <div class="pull-right"><strong>Rank:&nbsp;</strong><span class="badge" >{{ player.rank }}</span></div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class='pic'>
+                    <img ng-src="{{player.image}}" width='100%' class="img-rounded" />
+                </div>                  
+                <button class="btn btn-default" ng-click="this.revil()">
+                    <span class="glyphicon glyphicon-pencil">&nbsp;</span>Edit Player
+                </button>
+            </div>
+            <div class="list-group col-md-6">
+                <div class='list-group-item'><strong>Age:</strong><span class="badge" >{{ player.age }}</span></div>
+                <div class='list-group-item'><strong>Played:</strong><span class="badge" >{{ player.gamesPlayed }}</span></div>
+                <div class='list-group-item'><strong>Won:</strong><span class="badge" >{{ player.gamesWon }}</span></div>
+                <div class='list-group-item'><strong>Goals Scored:</strong><span class="badge" >{{ player.goalsScored }}</span></div>
+                <div class='list-group-item'>
+                    <strong>Total Score:</strong>
+                    <button class="btn btn-link btn-xs" ng-click="this.revealTotalScore()" >
+                        <span  class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                    </button>
+                    <progressbar value="dynamic" type="{{ type }}">{{ dynamic }}</progressbar>                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
