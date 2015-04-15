@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "bootstrap-css-only": "~3.3.4",
-    "angular-ui-bootstrap-bower": "~0.12.1",
     "angularAMD": "~0.2.1"
   }
 }
