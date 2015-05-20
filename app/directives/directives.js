@@ -1,10 +1,9 @@
 define(['app'], function (app) {
-  app.directive('koPlayer', function ($timeout) {
+  app.directive('koPlayer', function ($timeout,$modal) {
 
-    function link(scope, element, attrs) {
-      var
-        playerInfo = scope.player;
-      
+    function link(scope, element, attrs,modal) {
+      var playerInfo = scope.player;
+
       playerInfo.dynamic = 0;
 
       scope.revealTotalScore = function () {
@@ -20,15 +19,33 @@ define(['app'], function (app) {
         scope.dynamic = playerInfo.totalScore;
         scope.type = type;
       };
-    }
+
+      scope.editPlayer = function(size){
+
+        var modalInstance = $modal.open({
+          animation: false,
+          scope : scope,
+          templateUrl: 'playerModal.html',
+          controller: 'ModalInstanceCtrl',
+          size: size,
+          resolve: {
+          }
+
+        });
+      };
+
+    };
 
     return {
-      restrict: 'E',
-      link: link,
+      restrict: 'EC',
       scope: {
         player: '='
       },
-      templateUrl: 'templates/directives/grid-player.html',
+      link: link,
+      //templateUrl: 'templates/directives/grid-player.html',
+      templateUrl: function(elem, attr){
+        return 'templates/directives/'+attr.type+'-player.html';
+      }
     };
   });
 });

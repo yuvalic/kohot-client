@@ -1,0 +1,18 @@
+
+    <td>
+      <button class="btn" ng-click="this.editPlayer('')">
+      <span class="glyphicon glyphicon-pencil">&nbsp;</span>Edit
+      </button>
+    </td>
+    <td>
+        <img ng-src="{{player.image}}" width='40' height='40'class="img-circle" />
+    </td>           
+    <td class='name'>{{ player.fullName }}</td>
+    <td class='rank'>{{ player.rank }}</td>
+    <td class='age'>{{ player.age }}</td>
+    <td class='points'>{{ player.gamesPlayed }}</td>
+    <td class='points'>{{ player.gamesWon }}</td>
+    <td class='winPercent text-success h4'>{{ player.winPercent }}</td>
+    <td class='winPercent'>{{ player.goalsScored }}</td>
+
+<!-- model Template -->
